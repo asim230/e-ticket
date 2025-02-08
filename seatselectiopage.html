@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            text-align: center;
+        }
+
+        .seat-container {
+            width: 80%;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .seats {
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .seat {
+            width: 50px;
+            height: 50px;
+            background: #28a745;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .seat.booked {
+            background: #dc3545;
+            cursor: not-allowed;
+        }
+
+        .seat.selected {
+            background: #ffc107;
+        }
+
+        .info {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="seat-container">
+        <h2>Select Your Seats</h2>
+        <div class="seats" id="seats">
+            <!-- Seats will be generated dynamically -->
+        </div>
+        <p class="info">Selected Seats: <span id="selectedSeats">None</span></p>
+        <p class="info">Total Fare: ₹<span id="totalFare">0</span></p>
+        <button class="btn"><a href="paymentpage.html">Confirm Booking</a></button>
+    </div>
+
+    <script>
+        const seatContainer = document.getElementById("seats");
+        const selectedSeatsText = document.getElementById("selectedSeats");
+        const totalFareText = document.getElementById("totalFare");
+        const seatFare = 750; // Assume fare per seat
+        const bookedSeats = [2, 5, 9, 12]; // Assume some booked seats
+        
+        for (let i = 1; i <= 16; i++) {
+            const seat = document.createElement("div");
+            seat.classList.add("seat");
+            seat.textContent = i;
+            
+            if (bookedSeats.includes(i)) {
+                seat.classList.add("booked");
+            } else {
+                seat.addEventListener("click", function() {
+                    if (!seat.classList.contains("selected")) {
+                        seat.classList.add("selected");
+                    } else {
+                        seat.classList.remove("selected");
+                    }
+                    updateSelection();
+                });
+            }
+            
+            seatContainer.appendChild(seat);
+        }
+        
+        function updateSelection() {
+            const selectedSeats = document.querySelectorAll(".seat.selected");
+            let selectedNumbers = [];
+            selectedSeats.forEach(seat => selectedNumbers.push(seat.textContent));
+            selectedSeatsText.textContent = selectedNumbers.length ? selectedNumbers.join(", ") : "None";
+            totalFareText.textContent = selectedNumbers.length * seatFare;
+        }
+    </script>
+</body>
+</html>

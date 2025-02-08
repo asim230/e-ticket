@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Buses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        header, footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: #007bff;
+            color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .bus-list {
+            width: 80%;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .bus-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .bus-item:last-child {
+            border-bottom: none;
+        }
+
+        .bus-info {
+            flex: 1;
+        }
+
+        .bus-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #007bff;
+        }
+
+        .bus-details {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 5%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">E-Ticket</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tickets</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="bus-list">
+        <h2>Available Buses</h2>
+        
+        <div class="bus-item">
+            <div class="bus-info">
+                <p class="bus-name">Express Travels</p>
+                <p class="bus-details">Departure: 10:00 AM | Arrival: 5:00 PM</p>
+                <p class="bus-details">Available Seats: 12 | Fare: ₹750</p>
+            </div>
+            <button class="btn"><a href="seatselectiopage.html">Select Seats</a></button>
+        </div>
+        
+        <div class="bus-item">
+            <div class="bus-info">
+                <p class="bus-name">Luxury Bus Co.</p>
+                <p class="bus-details">Departure: 11:30 AM | Arrival: 6:30 PM</p>
+                <p class="bus-details">Available Seats: 14 | Fare: ₹950</p>
+            </div>
+            <button class="btn"><a href="seatselectiopage.html">Select Seats</a></button>
+        </div>
+        
+        <div class="bus-item">
+            <div class="bus-info">
+                <p class="bus-name">Metroline Express</p>
+                <p class="bus-details">Departure: 1:00 PM | Arrival: 8:00 PM</p>
+                <p class="bus-details">Available Seats: 13 | Fare: ₹800</p>
+            </div>
+            <button class="btn"><a href="seatselectiopage.html">Select Seats</a></button>
+        </div>
+        
+        <div class="bus-item">
+            <div class="bus-info">
+                <p class="bus-name">CityLink Travels</p>
+                <p class="bus-details">Departure: 3:30 PM | Arrival: 10:30 PM</p>
+                <p class="bus-details">Available Seats: 12 | Fare: ₹700</p>
+            </div>
+            <button class="btn"><a href="seatselectiopage.html">Select Seats</a></button>
+        </div>
+        
+        <div class="bus-item">
+            <div class="bus-info">
+                <p class="bus-name">FastTrack Bus Service</p>
+                <p class="bus-details">Departure: 5:00 PM | Arrival: 12:00 AM</p>
+                <p class="bus-details">Available Seats: 14 | Fare: ₹850</p>
+            </div>
+            <button class="btn"><a href="seatselectiopage.html">Select Seats</a></button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 E-Ticket. All rights reserved.</p>
+    </footer>
+</body>
+</html>
