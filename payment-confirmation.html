@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .confirmation-container {
+            background: #ffffff;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            width: 90%;
+            max-width: 450px;
+            text-align: left;
+        }
+        h2, h3 {
+            color: #2d9c4a;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            color: #555;
+        }
+        .section {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        .total {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #007bff;
+        }
+        .btn {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            background: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h2>Payment Confirmation</h2>
+        
+        <div class="section">
+            <h3>Booking Details</h3>
+            <p><strong>Bus:</strong> KPN Travels</p>
+            <p><strong>Route:</strong> Chennai → Bangalore</p>
+            <p><strong>Departure:</strong> 10:30 PM, Feb 10</p>
+            <p><strong>Seats:</strong> A1, A2</p>
+        </div>
+        
+        <div class="section">
+            <h3>Fare Summary</h3>
+            <p>Base Fare: ₹800</p>
+            <p>GST (5%): ₹40</p>
+            <p class="total">Total Amount: ₹840</p>
+        </div>
+        
+        <div class="section">
+            <h3>Selected Payment Method</h3>
+            <p><strong>Method:</strong> <span id="selected-method">UPI</span></p>
+        </div>
+        
+        <a href="payment-success.html" class="btn">Confirm & Pay</a>
+    </div>
+</body>
+</html>
