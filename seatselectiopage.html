@@ -68,6 +68,7 @@
             text-align: left;
             margin-top: 3rem; /* Space between header and confirmation container */
             align-self: center; /* Ensures it stays centered */
+            margin-bottom: 3rem;
         }
         .seats {
             display: grid;
@@ -138,6 +139,45 @@
         a:active {
             color: inherit;
         }
+        footer {
+            text-align: center;
+            padding: 2rem 5%;
+            background: linear-gradient(120deg, #000851, #1cb5e0);
+            color: #ffffff;
+            position: relative;
+            width: 100%;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #1cb5e0;
+        }
+        footer .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        footer .social-icons a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.5rem;
+        }
+        
+        footer p {
+            font-size: 1rem;
+        }
+        
+        footer p span {
+            color: #1cb5e0;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -198,5 +238,13 @@
             totalFareText.textContent = selectedNumbers.length * seatFare;
         }
     </script>
+    <footer>
+        <div class="social-icons">
+            <a href="#">&#x1F426;</a>
+            <a href="#">&#x1F4F2;</a>
+            <a href="#">&#x1F4F7;</a>
+        </div>
+        <p>&copy; 2024 <span>E-Ticket</span>. All rights reserved.</p>
+    </footer>
 </body>
 </html>
