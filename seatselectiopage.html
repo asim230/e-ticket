@@ -11,23 +11,64 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f8f9fa;
-            color: #333;
-            text-align: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers content horizontally */
+            min-height: 100vh;
         }
-
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1cb5e0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #1cb5e0;
+        }
         .seat-container {
-            width: 80%;
-            margin: 2rem auto;
-            padding: 1rem;
             background: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            width: 90%;
+            max-width: 450px;
+            text-align: left;
+            margin-top: 3rem; /* Space between header and confirmation container */
+            align-self: center; /* Ensures it stays centered */
         }
-
         .seats {
             display: grid;
             grid-template-columns: repeat(4, 50px);
@@ -61,7 +102,6 @@
             margin-top: 10px;
             font-size: 1rem;
         }
-
         .btn {
             padding: 0.5rem 1rem;
             font-size: 1rem;
@@ -73,8 +113,12 @@
             border: none;
             cursor: pointer;
             margin-top: 10px;
-        }
-
+            display: block; /* Ensures full-width alignment control */
+            text-align: center; /* Centers text inside button */
+            width: fit-content; /* Avoids unnecessary stretching */
+            margin-left: auto; /* Centers button horizontally */
+            margin-right: auto; /* Centers button horizontally */
+        }     
         .btn:hover {
             background: #0056b3;
         }
@@ -94,10 +138,20 @@
         a:active {
             color: inherit;
         }
-        
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo">E-Ticket</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ticketpage.html">Tickets</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="seat-container">
         <h2>Select Your Seats</h2>
         <div class="seats" id="seats">
@@ -105,7 +159,7 @@
         </div>
         <p class="info">Selected Seats: <span id="selectedSeats">None</span></p>
         <p class="info">Total Fare: ₹<span id="totalFare">0</span></p>
-        <button class="btn"><a href="paymentpage.html">Confirm Booking</a></button>
+        <button class="btn"><a href="payment-option.html">Confirm Booking</a></button>
     </div>
 
     <script>

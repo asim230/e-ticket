@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bus Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1cb5e0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #1cb5e0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 3rem auto; /* Adds top and bottom spacing */
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #f8d210;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+        .section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        .highlight {
+            font-weight: 600;
+            color: #f8d210;
+        }
+        .footer {
+            margin-top: 2.5rem;
+            font-size: 1rem;
+            color: #ddd;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">E-Ticket</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ticketpage.html">Tickets</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to <span class="highlight">EasyBus</span>, your go-to platform for seamless and reliable bus booking services.</p>
+        
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>We aim to make your travel experience effortless by providing a smooth and convenient bus booking platform.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Why Choose Us?</h2>
+            <p>✔ Trusted by thousands of travelers.<br>✔ Easy, fast, and secure booking.<br>✔ 24/7 customer support.</p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 EasyBus. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

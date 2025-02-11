@@ -11,15 +11,54 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f5f7fa;
-            text-align: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            overflow-x: hidden;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            flex-direction: column;
+            align-items: center; /* Centers content horizontally */
+            min-height: 100vh;
         }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1cb5e0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #1cb5e0;
+        }
+        
         .confirmation-container {
             background: #ffffff;
             padding: 2rem;
@@ -28,7 +67,9 @@
             width: 90%;
             max-width: 450px;
             text-align: left;
-        }
+            margin-top: 3rem; /* Space between header and confirmation container */
+            align-self: center; /* Ensures it stays centered */
+        }        
         h2, h3 {
             color: #2d9c4a;
             margin-bottom: 0.5rem;
@@ -69,6 +110,17 @@
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo">E-Ticket</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ticketpage.html">Tickets</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="confirmation-container">
         <h2>Payment Confirmation</h2>
         
@@ -92,7 +144,7 @@
             <p><strong>Method:</strong> <span id="selected-method">UPI</span></p>
         </div>
         
-        <a href="payment-success.html" class="btn">Confirm & Pay</a>
+        <a href="payment-sucess.html" class="btn">Confirm & Pay</a>
     </div>
 </body>
 </html>

@@ -11,14 +11,52 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f5f7fa;
-            text-align: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            overflow-x: hidden;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center; /* Centers content horizontally */
+            min-height: 100vh;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            height: 100vh;
+            padding: 1rem 5%;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1cb5e0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #1cb5e0;
         }
         .payment-container {
             background: #ffffff;
@@ -28,6 +66,8 @@
             width: 90%;
             max-width: 450px;
             text-align: left;
+            margin-top: 3rem; /* Space between header and confirmation container */
+            align-self: center; /* Ensures it stays centered */
         }
         h2, h3 {
             color: #2d9c4a;
@@ -113,6 +153,17 @@
     </script>
 </head>
 <body>
+    <header>
+        <div class="logo">E-Ticket</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ticketpage.html">Tickets</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="payment-container">
         <h2>Confirm Your Payment</h2>
         
@@ -141,7 +192,7 @@
         <div id="upi-field" class="hidden">
             <h3>Enter UPI ID</h3>
             <input type="text" class="input-field" placeholder="example@upi">
-            <button class="btn"><a href="paymentsuccessfulpage.html">Proceed to Pay</a></button>
+            <button class="btn"><a href="payment-confirmation.html">Proceed to Pay</a></button>
         </div>
         
         <div id="card-fields" class="hidden">
@@ -149,7 +200,7 @@
             <input type="text" class="input-field" placeholder="Card Number">
             <input type="text" class="input-field" placeholder="Expiry Date (MM/YY)">
             <input type="text" class="input-field" placeholder="CVV">
-            <button class="btn"><a href="paymentsuccessfulpage.html">Proceed to Pay</a></button>
+            <button class="btn"><a href="payment-confirmation.html">Proceed to Pay</a></button>
         </div>
         
         <div id="netbanking-field" class="hidden">
@@ -160,7 +211,7 @@
                 <option>ICICI</option>
                 <option>Axis Bank</option>
             </select>
-            <button class="btn"><a href="paymentsuccessfulpage.html">Proceed to Pay</a></button>
+            <button class="btn"><a href="payment-confirmation.html">Proceed to Pay</a></button>
         </div>
     </div>
 </body>
